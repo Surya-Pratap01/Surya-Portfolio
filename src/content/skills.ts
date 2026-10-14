@@ -1,15 +1,46 @@
-export type SkillGroup = {
-  label: string;
-  items: string[];
-  usedIn: string[]; // project slugs
+export type SkillCategory = {
+  title: string;
+  skills: string[];
+  description: string;
 };
 
-export const skillGroups: SkillGroup[] = [
-  { label: 'Languages', items: ['C++', 'Python', 'Java', 'JavaScript', 'TypeScript', 'SQL'], usedIn: ['nexus-ai', 'tradevision', 'samadhan', 'campus-eats'] },
-  { label: 'Frontend', items: ['HTML', 'CSS', 'React', 'Next.js', 'Tailwind CSS'], usedIn: ['nexus-ai', 'samadhan', 'campus-eats'] },
-  { label: 'Backend', items: ['Flask', 'tRPC', 'FastAPI'], usedIn: ['nexus-ai', 'tradevision', 'samadhan'] },
-  { label: 'Databases', items: ['PostgreSQL', 'SQLite', 'Supabase', 'Prisma', 'Redis'], usedIn: ['nexus-ai', 'tradevision', 'samadhan', 'campus-eats'] },
-  { label: 'AI / Generative AI', items: ['Google Gemini', 'Generative AI', 'AI Agent Workflows', 'E2B', 'LangGraph'], usedIn: ['nexus-ai', 'tradevision'] },
-  { label: 'Cloud / Deployment', items: ['Vercel', 'Supabase Cloud', 'AWS Fundamentals'], usedIn: ['nexus-ai', 'campus-eats'] },
-  { label: 'Tools', items: ['Git', 'GitHub', 'Inngest', 'Clerk', 'Leaflet.js', 'Chart.js', 'WebSocket'], usedIn: ['nexus-ai', 'tradevision', 'samadhan'] },
+export const skillCategories: SkillCategory[] = [
+  {
+    title: 'Languages',
+    skills: ['C++', 'Python', 'TypeScript', 'JavaScript', 'SQL'],
+    description: 'Core programming languages applied across algorithms, system services, and full-stack applications.',
+  },
+  {
+    title: 'Frontend Engineering',
+    skills: ['React', 'Next.js (App Router)', 'Tailwind CSS', 'HTML5', 'CSS3', 'Leaflet.js'],
+    description: 'Building responsive, accessible user interfaces with clean component composition and state management.',
+  },
+  {
+    title: 'Backend & Databases',
+    skills: [
+      'Node.js',
+      'FastAPI',
+      'Flask',
+      'PostgreSQL',
+      'PostGIS',
+      'Supabase (Auth & RLS)',
+      'SQLite',
+    ],
+    description: 'Relational data modeling, spatial queries, REST API handlers, and database access security policies.',
+  },
+  {
+    title: 'Tools & Platforms',
+    skills: ['Git', 'GitHub', 'VS Code', 'Vercel', 'Postman'],
+    description: 'Version control, developer tooling, branch workflows, and cloud deployment pipelines.',
+  },
+  {
+    title: 'CS Fundamentals',
+    skills: [
+      'Data Structures & Algorithms',
+      'Object-Oriented Programming (OOP)',
+      'Database Management Systems (DBMS)',
+      'Operating Systems',
+    ],
+    description: 'Foundational computer science principles applied to software structure, query optimization, and memory efficiency.',
+  },
 ];

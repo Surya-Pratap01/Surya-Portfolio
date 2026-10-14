@@ -22,29 +22,30 @@ const mono = IBM_Plex_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
   display: 'swap',
-  weight: ['400', '500'],
+  weight: ['400', '500', '600'],
 });
 
-const siteUrl = 'https://surya-pratap.vercel.app'; // [NEEDS VERIFICATION] update with real domain
+const siteUrl = 'https://surya-pratap.vercel.app';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Surya Pratap Singh Rathod — Computer Science Student & Full-Stack Developer',
+    default: 'Surya Pratap Singh Rathod | Full-Stack Developer',
     template: '%s | Surya Pratap Singh Rathod',
   },
   description:
-    'Portfolio of Surya Pratap Singh Rathod, a Computer Science student at Bennett University building full-stack and applied-AI projects, and Vice Captain of the university volleyball team.',
+    'Full-stack developer and Computer Science student at Bennett University building practical software across web applications, databases, and applied AI systems.',
   keywords: [
     'Surya Pratap Singh Rathod',
-    'full-stack developer',
-    'applied AI',
+    'Full-Stack Developer',
+    'Software Engineer',
     'Bennett University',
+    'Campus Eats',
+    'Bhoomi Sanket',
+    'Samadhan',
     'Next.js',
     'TypeScript',
-    'computer science student',
-    'Nexus-AI',
-    'TradeVision',
+    'PostgreSQL',
   ],
   authors: [{ name: 'Surya Pratap Singh Rathod' }],
   creator: 'Surya Pratap Singh Rathod',
@@ -53,36 +54,28 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'Surya Pratap Singh Rathod',
-    title: 'Surya Pratap Singh Rathod — Computer Science Student & Full-Stack Developer',
+    title: 'Surya Pratap Singh Rathod | Full-Stack Developer',
     description:
-      'Portfolio of Surya Pratap Singh Rathod, a Computer Science student at Bennett University building full-stack and applied-AI projects, and Vice Captain of the university volleyball team.',
+      'Full-stack developer and Computer Science student at Bennett University building practical software across web applications, databases, and applied AI systems.',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Surya Pratap Singh Rathod — Full-Stack Developer & Applied AI Builder',
+        url: '/images/surya-portrait.jpg',
+        width: 768,
+        height: 1024,
+        alt: 'Surya Pratap Singh Rathod',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Surya Pratap Singh Rathod — Computer Science Student & Full-Stack Developer',
+    title: 'Surya Pratap Singh Rathod | Full-Stack Developer',
     description:
-      'Portfolio of Surya Pratap Singh Rathod, a Computer Science student at Bennett University building full-stack and applied-AI projects.',
-    images: ['/og-image.png'],
-    creator: '@rathoresurya01',
+      'Full-stack developer and Computer Science student at Bennett University building practical software across web applications, databases, and applied AI systems.',
+    images: ['/images/surya-portrait.jpg'],
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   icons: {
     icon: '/favicon.ico',
@@ -97,12 +90,8 @@ const jsonLd = {
   sameAs: [
     'https://github.com/Surya-Pratap01',
     'https://www.linkedin.com/in/surya-pratap-a5a855312/',
-    'https://x.com/rathoresurya01',
-    'https://www.instagram.com/rathore_surya_pratap_singh',
   ],
-  jobTitle: 'Computer Science Student & Full-Stack Developer',
-  description:
-    'B.Tech Computer Science & Engineering student at Bennett University, building full-stack and applied-AI projects.',
+  jobTitle: 'Full-Stack Developer',
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Bennett University',
@@ -110,13 +99,13 @@ const jsonLd = {
   },
   knowsAbout: [
     'Full-Stack Development',
-    'Applied AI',
     'Next.js',
     'TypeScript',
-    'Python',
+    'PostgreSQL',
+    'Supabase',
     'FastAPI',
-    'LangGraph',
-    'Google Gemini',
+    'Flask',
+    'Applied AI',
   ],
 };
 
@@ -136,7 +125,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased bg-bg-deep text-text-primary">
+      <body className="antialiased bg-[#F7F7F4] text-[#17191D]">
         <a href="#main-content" className="skip-to-content">
           Skip to content
         </a>

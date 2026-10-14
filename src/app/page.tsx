@@ -1,24 +1,24 @@
 import Hero from '@/components/sections/Hero';
+import FeaturedProjects from '@/components/sections/FeaturedProjects';
+import MoreProjects from '@/components/sections/MoreProjects';
 import About from '@/components/sections/About';
-import Build from '@/components/sections/Build';
-import Stack from '@/components/sections/Stack';
-import LeadCompete from '@/components/sections/LeadCompete';
-import Milestones from '@/components/sections/Milestones';
-import WhatsNext from '@/components/sections/WhatsNext';
+import ExperienceLeadership from '@/components/sections/ExperienceLeadership';
+import Skills from '@/components/sections/Skills';
+import AchievementsEducation from '@/components/sections/AchievementsEducation';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <>
-      <main>
+      <main id="main-content">
         <Hero />
+        <FeaturedProjects />
+        <MoreProjects />
         <About />
-        <Build />
-        <Stack />
-        <LeadCompete />
-        <Milestones />
-        <WhatsNext />
+        <ExperienceLeadership />
+        <Skills />
+        <AchievementsEducation />
         <Contact />
       </main>
       <Footer />

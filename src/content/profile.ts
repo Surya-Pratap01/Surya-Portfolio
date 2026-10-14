@@ -1,24 +1,25 @@
 export const profile = {
   name: 'Surya Pratap Singh Rathod',
   displayName: 'Surya',
+  initials: 'SPSR',
   location: 'Greater Noida, Uttar Pradesh, India',
   university: 'Bennett University',
-  degree: 'B.Tech Computer Science & Engineering',
-  year: '3rd Year',
-  graduationYear: 'June 2028',
-  headline: 'I build software, explore AI, and lead on and off the court.',
-  tagline: 'CS Student. Full-stack & applied AI builder. Vice Captain, Bennett Volleyball.',
-  shortBio: 'Surya is a 3rd-year Computer Science student at Bennett University who builds full-stack products — including an AI code-generation platform and a civic-issue reporting system — and serves as Vice Captain of the university\'s men\'s volleyball team. He\'s drawn to problems that go from idea to something people can actually use.',
-  mediumBio: `I'm a Computer Science student at Bennett University, currently in my third year. I like taking a problem and turning it into something that actually works — that's what pulled me toward CSE in the first place, and it's what keeps me building outside of coursework: an AI platform that generates and runs code in sandboxed environments, a civic-issue reporting tool built for Smart India Hackathon 2025, and a food-rating site for my own campus.
-
-I'm also drawn to AI/ML — less as a buzzword, more because it changes what's actually solvable: instead of writing explicit rules for every case, you design systems that learn the pattern. I'm still figuring out how deep I want to go into that versus building products with it.
-
-Outside code, I'm Vice Captain of Bennett's men's volleyball team — a role that's taught me more about communication and consistency than most classes have.`,
+  degree: 'B.Tech in Computer Science and Engineering',
+  batch: 'Batch 48',
+  academicPeriod: 'Aug 2024 – Jun 2028',
+  cgpa: '8.14',
+  headline: 'Full-Stack Developer building thoughtful software for real-world problems.',
+  tagline: 'Computer science student building full-stack platforms, databases, and applied AI systems.',
+  shortBio:
+    'Computer Science student at Bennett University with experience across full-stack engineering, applied AI, databases, and practical problem solving. Team leader for Smart India Hackathon projects and Vice-Captain of the university volleyball team.',
+  aboutNarrative: [
+    'I am a Computer Science student at Bennett University (2024–2028) focused on full-stack software development and practical engineering. I like taking problems with messy edge cases and building software that people can actually use in everyday contexts.',
+    'My recent work spans full-stack web applications, relational and spatial database systems, and applied AI workflows. Whether designing PostgreSQL Row-Level Security policies for a campus food review platform, structuring land acquisition tracking for national infrastructure monitoring, or building civic issue reporting pipelines, I focus on clean architecture, verifiable data flows, and thoughtful user experiences.',
+    'Alongside software engineering, I serve as Vice-Captain of the Bennett University Men\'s Volleyball Team, earning 9 inter-university podium finishes. Competitive sports taught me the value of relentless practice, transparent team communication, and making calm, decisive calls under pressure – disciplines that directly shape how I build software and collaborate with engineering teams.',
+  ],
   social: {
     github: 'https://github.com/Surya-Pratap01',
     linkedin: 'https://www.linkedin.com/in/surya-pratap-a5a855312/',
-    x: 'https://x.com/rathoresurya01',
-    instagram: 'https://www.instagram.com/rathore_surya_pratap_singh',
     email: 'suryarathore051@gmail.com',
   },
   resumeUrl: '/resume.pdf',

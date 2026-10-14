@@ -1,121 +1,69 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
 import { profile } from '@/content/profile';
 
-const fadeUp = (delay = 0) => ({
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, delay, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
-  },
-});
-
-const facts = [
-  { label: 'University', value: 'Bennett University' },
-  { label: 'Degree', value: 'B.Tech CSE' },
-  { label: 'Year', value: '3rd Year · Grad June 2028' },
-  { label: 'Location', value: 'Greater Noida, India' },
-  { label: 'Role', value: "Vice Captain, Men's Volleyball" },
-];
-
-const currently = [
-  'Building full-stack & AI projects',
-  'Exploring applied AI systems',
-  'Vice Captain, Bennett Volleyball',
-  'Looking for SWE internships',
+const quickFacts = [
+  { label: 'Institution', value: 'Bennett University, Greater Noida' },
+  { label: 'Degree', value: 'B.Tech in Computer Science and Engineering' },
+  { label: 'Academic Standing', value: 'CGPA 8.14 · Aug 2024 – Jun 2028' },
+  { label: 'Core Technical Role', value: 'Technical Head, Data Science Society' },
+  { label: 'Athletics Leadership', value: "Vice-Captain, Men's Volleyball Team" },
+  { label: 'Hackathon Track', value: 'SIH 2026 Internal Finalist · SIH 2025' },
 ];
 
 export default function About() {
-  const shouldReduceMotion = useReducedMotion();
-
-  const paragraphs = profile.mediumBio
-    .split('\n\n')
-    .map((p) => p.trim())
-    .filter(Boolean);
-
   return (
     <section
       id="about"
-      aria-label="About Surya"
-      className="py-28 lg:py-36 bg-bg-alt"
+      aria-label="About Surya Pratap Singh Rathod"
+      className="py-20 md:py-28 bg-[#F7F7F4] border-b border-[#E4E6E7]"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-        >
-          <motion.div variants={fadeUp(0)} className="mb-16 lg:mb-20">
-            <p className="eyebrow mb-5">About</p>
-            <h2
-              className="font-[family-name:var(--font-display)] text-text-primary max-w-2xl"
-              style={{ fontSize: 'clamp(2.25rem, 5vw, 3.25rem)', letterSpacing: '-0.025em', lineHeight: 1.15 }}
-            >
-              The person behind the projects.
-            </h2>
-          </motion.div>
+      <div className="editorial-container">
+        {/* Section Header */}
+        <div className="pb-8 border-b border-[#E4E6E7]">
+          <p className="section-label mb-2">Background &amp; Approach</p>
+          <h2 className="font-serif-display text-3xl sm:text-4xl text-[#17191D] font-normal tracking-tight">
+            About Me
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-start">
-            <motion.div
-              variants={shouldReduceMotion ? {} : fadeUp(0.08)}
-              className="lg:col-span-7 space-y-6"
-            >
-              {paragraphs.map((para, i) => (
-                <p
-                  key={i}
-                  className="text-text-primary"
-                  style={{
-                    fontSize: 'clamp(1.05rem, 2vw, 1.15rem)',
-                    lineHeight: '1.85',
-                    maxWidth: '38rem',
-                  }}
-                >
-                  {para}
-                </p>
-              ))}
-            </motion.div>
-
-            <motion.div
-              variants={shouldReduceMotion ? {} : fadeUp(0.16)}
-              className="lg:col-span-5"
-            >
-              <dl className="space-y-0">
-                {facts.map((fact, i) => (
-                  <div
-                    key={fact.label}
-                    className="editorial-row py-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6"
-                  >
-                    <dt className="text-xs font-medium tracking-[0.12em] uppercase text-text-subtle flex items-center gap-3">
-                      <span className="mono text-accent tabular-nums opacity-70">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      {fact.label}
-                    </dt>
-                    <dd className="text-sm font-medium text-text-primary sm:text-right">
-                      {fact.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              <div className="mt-10 pt-8 border-t border-border">
-                <p className="text-xs font-medium tracking-[0.12em] uppercase text-text-subtle mb-5">
-                  Currently
-                </p>
-                <ul className="space-y-3" role="list">
-                  {currently.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-text-muted">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+        {/* Content Layout */}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          {/* Narrative Column */}
+          <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-[#646B73] leading-relaxed">
+            {profile.aboutNarrative.map((paragraph, index) => (
+              <p key={index} className="text-[#17191D]/80">
+                {paragraph}
+              </p>
+            ))}
           </div>
-        </motion.div>
+
+          {/* Fact Sheet Column */}
+          <div className="lg:col-span-5 bg-white border border-[#E4E6E7] rounded-lg p-6 shadow-sm space-y-5">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-[#17191D] pb-3 border-b border-[#E4E6E7]">
+              Academic &amp; Profile Summary
+            </h3>
+
+            <dl className="space-y-4 text-xs font-mono">
+              {quickFacts.map((fact) => (
+                <div key={fact.label} className="flex flex-col space-y-0.5">
+                  <dt className="text-[#646B73] uppercase tracking-wide text-[10px]">
+                    {fact.label}
+                  </dt>
+                  <dd className="text-sm font-sans font-medium text-[#17191D]">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="pt-4 border-t border-[#E4E6E7]">
+              <p className="text-xs text-[#646B73] leading-normal font-sans">
+                Currently exploring opportunities in full-stack engineering, distributed systems, and applied AI applications.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

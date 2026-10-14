@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, message, honeypot } = body;
 
-    // Honeypot — silently succeed for bots
+    // Honeypot - silently succeed for bots
     if (honeypot) return NextResponse.json({ success: true });
 
     // Basic validation
